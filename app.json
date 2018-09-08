@@ -1,0 +1,36 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/components/index",
+    "pages/components/button/index",
+    "pages/components/checkbox/index",
+    "pages/components/form/index"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "color":"",
+    "selectedColor":"#00B26A",
+    "list": [{
+      "iconPath":"images/icon_home.png",
+      "selectedIconPath":"images/icon_home_active.png",
+      "pagePath": "pages/index/index",
+      "text": "首页"
+    }, {
+      "iconPath":"images/icon_home.png",
+      "selectedIconPath":"images/icon_home_active.png",
+      "pagePath": "pages/logs/logs",
+      "text": "日志"
+    }, {
+      "iconPath":"images/icon_home.png",
+      "selectedIconPath":"images/icon_home_active.png",
+      "pagePath": "pages/components/index",
+      "text": "组件"
+    }]
+  }
+}

@@ -1,0 +1,6 @@
+<!--logs.wxml-->
+<view class="container log-list">
+  <view bind:tap="handleRoute1">button</view>
+  <view bind:tap="handleRoute2">checkbox</view>
+  <view bind:tap="handleRoute" data-name="./checkbox/index">form</view>
+</view>
