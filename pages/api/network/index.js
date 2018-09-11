@@ -4,6 +4,39 @@ Page({
   data: {
   	detailValue: ''
   },
+  onReady: function() {
+  	console.log('onReady')
+  },
+  onShow: function(){
+    console.log('onShow')
+    console.log(this)
+    wx.getSetting({
+	    success(res) {
+	    	console.log(res)
+	        if (!res.authSetting['scope.record']) {
+	            wx.authorize({
+	                scope: 'scope.record',
+	                success() {
+	                    // 用户已经同意小程序使用录音功能，后续调用 wx.startRecord 接口不会弹窗询问
+	                    wx.startRecord()
+	                }
+	            })
+	        }
+	    }
+	})
+  },
+  onShareAppMessage: function(Object) {
+  	console.log(Object)
+  	return {
+      title: '自定义转发标题',
+      path: '/pages/index/index'
+    }
+  },
+  onTabItemTap(item) {
+    console.log(item.index)
+    console.log(item.pagePath)
+    console.log(item.text)
+  },
   handleclick: function(e) {
   	console.log(this)
   	util.post('menu/get_list',{}).then(res =>{
@@ -14,21 +47,5 @@ Page({
 	    	detailValue: res
 	    })
   	})
- //    wx.request({
-	//   url: 'http://120.24.55.58:8131/index.php/user/send_vcode', //仅为示例，并非真实的接口地址
-	//   data: {
-	//      username: '' ,
-	//      type: '1'
-	//   },
-	//   header: {
-	//   	'content-type': 'application/json' // 默认值
-	//   },
-	//   success: function(res) {
-	//     console.log(res.data)
-	//   }
-	// })
- //    this.setData({
- //    	detailValue: e.detail
- //    })
   },
 })

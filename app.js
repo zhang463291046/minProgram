@@ -1,6 +1,11 @@
 //app.js
 App({
-  onLaunch: function () {
+  globalData: {
+    userInfo: null,
+    access_token: ''
+  },
+  onLaunch: function (val) {
+    console.log('onLaunch',val)
     // 展示本地存储能力
     var logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())
@@ -10,6 +15,16 @@ App({
     wx.login({
       success: res => {
         // 发送 res.code 到后台换取 openId, sessionKey, unionId
+        console.log('res',res)
+        // wx.request({
+        //   url: 'https://api.weixin.qq.com/sns/jscode2session?appid=APPID&secret=SECRET&js_code=JSCODE&grant_type=authorization_code',
+        //   data: {
+        //     code: res.code
+        //   },
+        //   success: res2 => {
+        //     console.log('res2', res2)
+        //   }
+        // })
       }
     })
     // 获取用户信息
@@ -19,6 +34,7 @@ App({
           // 已经授权，可以直接调用 getUserInfo 获取头像昵称，不会弹框
           wx.getUserInfo({
             success: res => {
+              console.log(res)
               // 可以将 res 发送给后台解码出 unionId
               this.globalData.userInfo = res.userInfo
 
@@ -32,6 +48,7 @@ App({
         }
       }
     })
+    // 获取用户信息
     var self = this;
     wx.request({
       url: 'http://120.24.55.58:8130/index.php/account/login', //仅为示例，并非真实的接口地址
@@ -48,8 +65,21 @@ App({
       }
     })
   },
-  globalData: {
-    userInfo: null,
-    access_token: ''
-  }
+  onShow: function(){
+    console.log('onShow')
+    console.log(this)
+  },
+  onHide: function(){
+    console.log('onHide')
+  },
+  onError: function(){
+    console.log('onError')
+  },
+  onPageNotFound: function(){
+    console.log('onPageNotFound')
+  },
+  otherFn: function(){
+    console.log('otherFn')
+    console.log(this)
+  },
 })
