@@ -30,7 +30,9 @@
     "pages/components/web-view/index",
     "pages/components/ad/index",
     "pages/api/index",
-    "pages/api/network/index"
+    "pages/api/network/index",
+    "pages/api/media/index",
+    "pages/api/storage/index"
   ],
   "window":{
     "backgroundTextStyle":"light",

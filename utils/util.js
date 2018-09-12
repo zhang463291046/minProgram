@@ -40,7 +40,30 @@ const post = (url = '', params = {}) => {
   })
 }
 
+const upload = (url = '', filePath = '', params = {}) => {
+  return new Promise((resolve, reject) => {
+    wx.uploadFile({
+      url: 'http://120.24.55.58:8130/index.php/'+url, //仅为示例，并非真实的接口地址
+      method: 'POST',
+      filePath: filePath,
+      name: 'myfile',
+      formData: params,
+      success: function(res) {
+        console.log(res.data)
+        var response = JSON.parse(res.data);
+        if (response.errcode == '0') { 
+          resolve(response.filename) 
+        }
+      },
+      fail: function(res) {
+        reject(res)
+      }
+    })
+  })
+}
+
 module.exports = {
   formatTime: formatTime,
-  post: post
+  post: post,
+  upload: upload
 }

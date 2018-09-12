@@ -1,4 +1,12 @@
 <view>
-  <view>数据:{{detailValue}}</view>
-  <button size="mini" bind:tap="handleclick">点击</button>
+  <button size="mini" bind:tap="handleclick1">请求网络数据</button>
+  <button size="mini" bind:tap="handleclick2">上传文件</button>
+  <view>
+  	<view>数据区域</view>
+  	<view wx:for="{{detailValue}}" wx:for-item="item">{{item.name}}</view>
+  </view>
+  <view>
+  	<view>数据区域</view>
+  	<view>{{url}}</view>
+  </view>
 </view>

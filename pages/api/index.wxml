@@ -1,4 +1,6 @@
 <!--logs.wxml-->
 <view class="container log-list">
   <view bind:tap="handleRoute" data-name="./network/index">network</view>
+  <view bind:tap="handleRoute" data-name="./media/index">media</view>
+  <view bind:tap="handleRoute" data-name="./storage/index">storage</view>
 </view>
