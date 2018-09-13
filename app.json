@@ -32,7 +32,9 @@
     "pages/api/index",
     "pages/api/network/index",
     "pages/api/media/index",
-    "pages/api/storage/index"
+    "pages/api/storage/index",
+    "pages/api/location/index",
+    "pages/api/device/index"
   ],
   "window":{
     "backgroundTextStyle":"light",

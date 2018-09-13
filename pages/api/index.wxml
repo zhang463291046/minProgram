@@ -3,4 +3,6 @@
   <view bind:tap="handleRoute" data-name="./network/index">network</view>
   <view bind:tap="handleRoute" data-name="./media/index">media</view>
   <view bind:tap="handleRoute" data-name="./storage/index">storage</view>
+  <view bind:tap="handleRoute" data-name="./location/index">location</view>
+  <view bind:tap="handleRoute" data-name="./device/index">device</view>
 </view>

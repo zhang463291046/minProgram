@@ -68,6 +68,14 @@ App({
   onShow: function(){
     console.log('onShow')
     console.log(this)
+    wx.getSetting({
+      success: function(res) {
+        console.log(res)
+      }
+    })
+    wx.authorize({scope: "scope.userInfo"});
+    wx.authorize({scope: "scope.userLocation"});
+    wx.authorize({scope: "scope.werun"});
   },
   onHide: function(){
     console.log('onHide')
