@@ -4,8 +4,8 @@ App({
     userInfo: null,
     access_token: ''
   },
-  onLaunch: function (val) {
-    console.log('onLaunch',val)
+  onLaunch: function(val) {
+    console.log('onLaunch', val)
     // 展示本地存储能力
     var logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())
@@ -15,7 +15,7 @@ App({
     wx.login({
       success: res => {
         // 发送 res.code 到后台换取 openId, sessionKey, unionId
-        console.log('res',res)
+        console.log('res', res)
         // wx.request({
         //   url: 'https://api.weixin.qq.com/sns/jscode2session?appid=APPID&secret=SECRET&js_code=JSCODE&grant_type=authorization_code',
         //   data: {
@@ -54,8 +54,8 @@ App({
       url: 'http://120.24.55.58:8130/index.php/account/login', //仅为示例，并非真实的接口地址
       method: 'POST',
       data: {
-         username: 'FE/qX43FuS7714TA11El2g==',
-         password: 'oJhM3DPgXNArwp9jI8ue4w=='
+        username: 'FE/qX43FuS7714TA11El2g==',
+        password: 'oJhM3DPgXNArwp9jI8ue4w=='
       },
       header: {
         'content-type': 'application/x-www-form-urlencoded' // 默认值
@@ -65,7 +65,7 @@ App({
       }
     })
   },
-  onShow: function(){
+  onShow: function() {
     console.log('onShow')
     console.log(this)
     wx.getSetting({
@@ -73,20 +73,26 @@ App({
         console.log(res)
       }
     })
-    wx.authorize({scope: "scope.userInfo"});
-    wx.authorize({scope: "scope.userLocation"});
-    wx.authorize({scope: "scope.werun"});
+    wx.authorize({
+      scope: "scope.userInfo"
+    });
+    wx.authorize({
+      scope: "scope.userLocation"
+    });
+    wx.authorize({
+      scope: "scope.werun"
+    });
   },
-  onHide: function(){
+  onHide: function() {
     console.log('onHide')
   },
-  onError: function(){
+  onError: function() {
     console.log('onError')
   },
-  onPageNotFound: function(){
+  onPageNotFound: function() {
     console.log('onPageNotFound')
   },
-  otherFn: function(){
+  otherFn: function() {
     console.log('otherFn')
     console.log(this)
   },

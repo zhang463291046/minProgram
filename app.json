@@ -37,6 +37,7 @@
     "pages/api/device/index"
   ],
   "window":{
+    "pageOrientation":"auto",
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "WeChat",

@@ -6,4 +6,10 @@
     <view>数据区域</view>
     <view>{{detailValue}}</view>
   </view>
+  
+  <map id="myMap" show-location />
+	<button size="mini" bindtap="getCenterLocation">获取位置</button>
+	<button size="mini" bindtap="moveToLocation">移动位置</button>
+	<button size="mini" bindtap="translateMarker">移动标注</button>
+	<button size="mini" bindtap="includePoints">缩放视野展示所有经纬度</button>
 </view>
