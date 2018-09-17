@@ -1,0 +1,39 @@
+<view>
+  <view>1、设置</view>
+  <button size="mini" bind:tap="handleclick1_1">获取授权信息</button>
+  <button size="mini" bind:tap="handleclick1_2">打开授权信息</button>
+  <view>2、获取当前账号信息</view>
+  <button size="mini" bind:tap="handleclick2_1">获取账号信息</button>
+  <view>3、收货地址</view>
+  <button size="mini" bind:tap="handleclick3_1">收货地址</button>
+  <view>4、授权</view>
+  <button size="mini" bind:tap="handleclick4_1">授权</button>
+  <view>5、卡券</view>
+  <button size="mini" bind:tap="handleclick5_1">添加</button>
+  <button size="mini" bind:tap="handleclick5_2">打开</button>
+  <view>6、发票</view>
+  <button size="mini" bind:tap="handleclick6_1">选择已有发票</button>
+  <button size="mini" bind:tap="handleclick6_2">选择发票抬头</button>
+  <view>7、支付</view>
+  <button size="mini" bind:tap="handleclick7_1">人脸</button>
+  <button size="mini" bind:tap="handleclick7_2">接口</button>
+  <view>8、用户信息</view>
+  <button size="mini" bind:tap="handleclick8_1">获取用户信息</button>
+  <view>9、微信运动</view>
+  <button size="mini" bind:tap="handleclick9_1">获取数据</button>
+  <view>10、数据分析</view>
+  <button size="mini" bind:tap="handleclick10_1">获取数据</button>
+  <view>11、登录</view>
+  <button size="mini" bind:tap="handleclick11_1">登录</button>
+  <button size="mini" bind:tap="handleclick11_2">登录</button>
+  <button size="mini" bind:tap="handleclick11_3">登录</button>
+  <view>12、生物认证</view>
+  <button size="mini" bind:tap="handleclick12_1">登录</button>
+  <view>13、小程序跳转</view>
+  <button size="mini" bind:tap="handleclick13_1">登录</button>
+  <button size="mini" bind:tap="handleclick13_2">登录</button>
+  <view>
+    <view>数据区域</view>
+    <view>{{detailValue}}</view>
+  </view>
+</view>

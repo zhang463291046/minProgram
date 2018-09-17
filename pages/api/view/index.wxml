@@ -1,33 +1,56 @@
-<form bindsubmit="formSubmit" bindreset="formReset">
-  <view class="section section_gap">
-    <view class="section__title">switch</view>
-    <switch name="switch"/>
+<view>
+  <view>1、交互反馈</view>
+  <button size="mini" bind:tap="handleclick1_1">显示消息提示框</button>
+  <button size="mini" bind:tap="handleclick1_2">隐藏消息提示框</button>
+  <button size="mini" bind:tap="handleclick1_3">显示loading提示框</button>
+  <button size="mini" bind:tap="handleclick1_4">隐藏loading提示框</button>
+  <button size="mini" bind:tap="handleclick1_5">​显示模态弹窗</button>
+  <button size="mini" bind:tap="handleclick1_6">​显示操作菜单</button>
+  <view>2、设置导航条</view>
+  <button size="mini" bind:tap="handleclick2_1">导航栏title</button>
+  <button size="mini" bind:tap="handleclick2_2">显示导航条加载动画</button>
+  <button size="mini" bind:tap="handleclick2_3">隐藏导航条加载动画</button>
+  <button size="mini" bind:tap="handleclick2_4">导航栏color</button>
+  <view>3、设置tabBar</view>
+  <button size="mini" bind:tap="handleclick3_1">添加文本</button>
+  <button size="mini" bind:tap="handleclick3_2">删除文本</button>
+  <button size="mini" bind:tap="handleclick3_3">显示红点</button>
+  <button size="mini" bind:tap="handleclick3_4">隐藏红点</button>
+  <button size="mini" bind:tap="handleclick3_5">设置样式</button>
+  <button size="mini" bind:tap="handleclick3_6">设置内容</button>
+  <button size="mini" bind:tap="handleclick3_7">显示tabBar</button>
+  <button size="mini" bind:tap="handleclick3_8">隐藏tabBar</button>
+  <view>4、设置窗口背景</view>
+  <button size="mini" bind:tap="handleclick4_1">设置窗口的背景色</button>
+  <button size="mini" bind:tap="handleclick4_2">设置下拉背景样式</button>
+  <view>5、设置置顶信息</view>
+  <button size="mini" bind:tap="handleclick5_1">设置窗口的背景色</button>
+  <view>6、导航</view>
+  <button size="mini" bind:tap="handleclick6_1">navigateTo</button>
+  <button size="mini" bind:tap="handleclick6_2">redirectTo</button>
+  <button size="mini" bind:tap="handleclick6_3">switchTab</button>
+  <button size="mini" bind:tap="handleclick6_4">navigateBack</button>
+  <button size="mini" bind:tap="handleclick6_5">reLaunch</button>
+  <view>7、动画</view>
+  <button size="mini" bind:tap="handleclick7_1">执行</button>
+  <view animation="{{animationData}}" style="background:red;height:100rpx;width:100rpx"></view>
+  <view>8、位置</view>
+  <button size="mini" bind:tap="handleclick8_1">执行</button>
+  <view>9、绘图</view>
+  <button size="mini" bind:tap="handleclick9_1">矩形</button>
+  <button size="mini" bind:tap="handleclick9_2">矩形</button>
+  <canvas canvas-id="myCanvas" style="border: 1px solid;" bindtouchmove="move"/>
+  <view>10、下拉刷新</view>
+  <button size="mini" bind:tap="handleclick10_1">开始</button>
+  <button size="mini" bind:tap="handleclick10_2">停止</button>
+  <view id="wxml">11、WXML节点信息</view>
+  <button size="mini" bind:tap="handleclick11_1">开始</button>
+  <view>12、WXML节点布局相交状态</view>
+  <button size="mini" bind:tap="handleclick12_1">开始</button>
+  <view>13、自定义组件</view>
+  <button size="mini" bind:tap="handleclick12_1">nextTick</button>
+  <view>
+    <view>数据区域</view>
+    <view>{{detailValue}}</view>
   </view>
-  <view class="section section_gap">
-    <view class="section__title">slider</view>
-    <slider name="slider" show-value ></slider>
-  </view>
-
-  <view class="section">
-    <view class="section__title">input</view>
-    <input name="input" placeholder="please input here" />
-  </view>
-  <view class="section section_gap">
-    <view class="section__title">radio</view>
-    <radio-group name="radio-group">
-      <label><radio value="radio1"/>radio1</label>
-      <label><radio value="radio2"/>radio2</label>
-    </radio-group>
-  </view>
-  <view class="section section_gap">
-    <view class="section__title">checkbox</view>
-    <checkbox-group name="checkbox">
-      <label><checkbox value="checkbox1"/>checkbox1</label>
-      <label><checkbox value="checkbox2"/>checkbox2</label>
-    </checkbox-group>
-  </view>
-  <view class="btn-area">
-    <button formType="submit">Submit</button>
-    <button formType="reset">Reset</button>
-  </view>
-</form>
+</view>

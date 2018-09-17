@@ -1,8 +1,27 @@
 <!--logs.wxml-->
 <view class="container log-list">
+	<view>设置tabBar</view>
+	<view>
+		<button size="mini" bind:tap="handleclick3_1">添加文本</button>
+	  <button size="mini" bind:tap="handleclick3_2">删除文本</button>
+	  <button size="mini" bind:tap="handleclick3_3">显示红点</button>
+	  <button size="mini" bind:tap="handleclick3_4">隐藏红点</button>
+	  <button size="mini" bind:tap="handleclick3_5">设置样式</button>
+	  <button size="mini" bind:tap="handleclick3_6">设置内容</button>
+	  <button size="mini" bind:tap="handleclick3_7">显示tabBar</button>
+	  <button size="mini" bind:tap="handleclick3_8">隐藏tabBar</button>
+	</view>
+	<view>设置窗口背景</view>
+	<view>
+		<button size="mini" bind:tap="handleclick4_1">设置窗口的背景色</button>
+  	<button size="mini" bind:tap="handleclick4_2">设置下拉背景样式</button>
+	</view>
   <view bind:tap="handleRoute" data-name="./network/index">network</view>
   <view bind:tap="handleRoute" data-name="./media/index">media</view>
   <view bind:tap="handleRoute" data-name="./storage/index">storage</view>
   <view bind:tap="handleRoute" data-name="./location/index">location</view>
   <view bind:tap="handleRoute" data-name="./device/index">device</view>
+  <view bind:tap="handleRoute" data-name="./view/index">view</view>
+  <view bind:tap="handleRoute" data-name="./platform/index">platform</view>
+  <view bind:tap="handleRoute" data-name="./interface/index">interface</view>
 </view>

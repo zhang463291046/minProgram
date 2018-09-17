@@ -34,7 +34,10 @@
     "pages/api/media/index",
     "pages/api/storage/index",
     "pages/api/location/index",
-    "pages/api/device/index"
+    "pages/api/device/index",
+    "pages/api/view/index",
+    "pages/api/platform/index",
+    "pages/api/interface/index"
   ],
   "window":{
     "pageOrientation":"auto",

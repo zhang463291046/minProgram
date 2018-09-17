@@ -113,19 +113,18 @@ Page({
   handleclick10(){
     wx.getWifiList();
   },
-  handleclick11(){
+  formSubmit(e){
     var self =this;
     console.log(self)
+    var password = e.detail.value.password;
     wx.connectWifi({
       SSID: self.data.SSID,
       BSSID: self.data.BSSID,
-      password: self.data.password
+      password: password,
+      success: function(res) {
+        console.log(res)
+      }
     });
-  },
-  bindInput: function(e) {
-    this.setData({
-      password: e.detail.value
-    })
   },
   handlewifi(e){
     this.setData({

@@ -1,0 +1,2 @@
+<button size="mini" bind:tap="handleclick1_1">同步获取</button>
+<button size="mini" bind:tap="handleclick1_2">异步获取</button>

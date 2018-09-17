@@ -34,14 +34,19 @@
   <view>
     <view>WIFI</view>
     <view>
-      <view>无线网络
-        <input value="" placeholder="密码" bindinput="bindInput"/>
+      <button size="mini" bind:tap="handleclick9">初始化</button>
+      <button size="mini" bind:tap="handleclick10">搜索</button>
+      <view>
         <button size="mini" wx:for="{{arr}}" wx:for-item="item" data-ssid="{{item.SSID}}" data-bssid="{{item.BSSID}}" bind:tap="handlewifi">{{item.SSID}}</button>
       </view>
-    	<button size="mini" bind:tap="handleclick8">初始化</button>
-    	<button size="mini" bind:tap="handleclick9">初始化</button>
-    	<button size="mini" bind:tap="handleclick10">搜索</button>
-    	<button size="mini" bind:tap="handleclick11">连接</button>
+      <form bindsubmit="formSubmit" bindreset="formReset">
+        <view>无线网络密码
+          <input name="password" value="" placeholder="密码"/>
+        </view>
+        <view>
+          <button size="mini" formType="submit">连接</button>
+        </view>
+      </form>
     </view>
   </view>
   <view>
