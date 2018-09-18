@@ -1,0 +1,78 @@
+<i-row>
+    <i-col span="8" i-class="col-class">col-8</i-col>
+    <i-col span="8" i-class="col-class">col-8</i-col>
+    <i-col span="8" i-class="col-class">col-8</i-col>
+</i-row>
+<i-grid>
+    <i-grid-item>
+        <i-grid-icon>
+            <image src="/images/icon_home.png" />
+        </i-grid-icon>
+        <i-grid-label>Grid</i-grid-label>
+    </i-grid-item>
+    <i-grid-item>Grid</i-grid-item>
+    <i-grid-item>Grid</i-grid-item>
+</i-grid>
+<i-panel title="标题">
+    <view style="padding: 15px;">PANEL 内容区域</view>
+</i-panel>
+<i-cell-group>
+    <i-cell title="只显示箭头" is-link></i-cell>
+    <i-cell title="跳转到首页" is-link url="/pages/dashboard/index"></i-cell>
+    <i-cell title="只有 footer 点击有效" is-link url="/pages/dashboard/index" only-tap-footer></i-cell>
+    <i-cell title="开关">
+        <switch slot="footer" checked />
+    </i-cell>
+</i-cell-group>
+<i-card title="卡片标题" extra="额外内容" thumb="https://i.loli.net/2017/08/21/599a521472424.jpg">
+    <view slot="content">内容不错</view>
+    <view slot="footer">尾部内容</view>
+</i-card>
+<i-button type="primary" bind:click="handleClick">这是一个按钮</i-button>
+<i-icon type="activity" size="28" color="#80848f" />
+<i-tab-bar current="{{ current }}" bindchange="handleChange">
+    <i-tab-bar-item key="homepage" icon="homepage" current-icon="homepage_fill" title="Home"></i-tab-bar-item>
+    <i-tab-bar-item key="group" icon="group" current-icon="group_fill" title="Friends"></i-tab-bar-item>
+    <i-tab-bar-item key="remind" icon="remind" current-icon="remind_fill" count="3" title="Notice"></i-tab-bar-item>
+    <i-tab-bar-item key="mine" icon="mine" current-icon="mine_fill" dot title="My"></i-tab-bar-item>
+</i-tab-bar>
+<i-tabs current="{{ current }}" bindchange="handleChange">
+    <i-tab key="homepage" title="选项1"></i-tab>
+    <i-tab key="group" title="选项2"></i-tab>
+    <i-tab key="remind" title="选项3"></i-tab>
+</i-tabs>
+<i-button bind:click="toggleLeft1" type="ghost">左边弹出1</i-button>
+<i-page current="{{ current2 }}" total="5" bind:change="handleChange2">
+    <view slot="prev">Prev</view>
+    <view slot="next">Next</view>
+</i-page>
+<i-steps>
+    <i-step status="finish">
+        <view slot="title">
+              已完成
+        </view>
+        <view slot="content">
+            这里是该步骤的描述信息
+        </view>
+    </i-step>
+    <i-step status="process">
+        <view slot="title">
+            进行中
+        </view>
+        <view slot="content">
+            这里是该步骤的描述信息
+        </view>
+    </i-step>
+    <i-step status="">
+        <view slot="title">
+            错误
+        </view>
+        <view slot="content">
+            这里是该步骤的描述信息
+        </view>
+    </i-step>
+</i-steps>
+<i-notice-bar>
+    2018年世界杯,将于6月14日至7月15日举行
+</i-notice-bar>
+
