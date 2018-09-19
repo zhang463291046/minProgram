@@ -30,6 +30,24 @@
     "i-modal": "/iview/dist/modal/index",
     "i-message": "/iview/dist/message/index",
     "i-spin": "/iview/dist/spin/index",
-    "i-swipeout": "/iview/dist/swipeout/index"
+    "i-swipeout": "/iview/dist/swipeout/index",
+    "i-badge": "/iview/dist/badge/index",
+    "i-alert": "/iview/dist/alert/index",
+    "i-tag": "/iview/dist/tag/index",
+    "i-progress": "/iview/dist/progress/index",
+    "i-avatar": "/iview/dist/avatar/index",
+    "i-collapse": "/iview/dist/collapse/index",
+    "i-collapse-item": "/iview/dist/collapse-item/index",
+    "i-count-down": "/iview/dist/count-down/index",
+    "i-divider": "/iview/dist/divider/index",
+    "i-load-more": "/iview/dist/load-more/index",
+    "i-input": "/iview/dist/input/index",
+    "i-radio-group": "/iview/dist/radio-group/index",
+    "i-radio": "/iview/dist/radio/index",
+    "i-checkbox-group": "/iview/dist/checkbox-group/index",
+    "i-checkbox": "/iview/dist/checkbox/index",
+    "i-switch": "/iview/dist/switch/index",
+    "i-rate": "/iview/dist/rate/index",
+    "i-input-number": "/iview/dist/input-number/index"
 	}
 }
