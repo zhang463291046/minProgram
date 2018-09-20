@@ -69,7 +69,7 @@
       "iconPath":"images/icon_home.png",
       "selectedIconPath":"images/icon_home_active.png",
       "pagePath": "pages/api/index",
-      "text": "接口"
+      "text": "接口API"
     }, {
       "iconPath":"images/icon_home.png",
       "selectedIconPath":"images/icon_home_active.png",

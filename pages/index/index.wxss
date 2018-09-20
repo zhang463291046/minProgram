@@ -17,5 +17,14 @@
 }
 
 .usermotto {
-  margin-top: 200px;
+  margin-top: 20px;
+}
+
+.log-list {
+  display: flex;
+  flex-direction: column;
+  padding: 40rpx;
+}
+.log-item {
+  margin: 10rpx;
 }

@@ -1,13 +1,16 @@
 //index.js
 //获取应用实例
 const app = getApp()
+//共用方法
+const util = require('../../utils/util.js')
 
 Page({
   data: {
-    motto: 'Hello World',
     userInfo: {},
     hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo')
+    canIUse: wx.canIUse('button.open-type.getUserInfo'),
+    motto: '启动日志',
+    logs: []
   },
   //事件处理函数
   bindViewTap: function() {
@@ -16,6 +19,11 @@ Page({
     })
   },
   onLoad: function () {
+    this.setData({
+      logs: (wx.getStorageSync('logs') || []).map(log => {
+        return util.formatTime(new Date(log))
+      })
+    })
     if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,
