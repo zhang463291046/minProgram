@@ -11,7 +11,7 @@
 		"newFeature": true
 	},
 	"compileType": "miniprogram",
-	"libVersion": "2.2.5",
+	"libVersion": "2.3.0",
 	"appid": "wxadf5a935bfc41d4f",
 	"projectname": "wechat-demo",
 	"isGameTourist": false,

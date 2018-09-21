@@ -42,14 +42,18 @@
   ],
   "window":{
     "pageOrientation":"auto",
+    "backgroundColor":"#ffffff",
     "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle":"black"
+    "navigationBarBackgroundColor": "#00B26A",
+    "navigationBarTitleText": "WeChat Test",
+    "navigationBarTextStyle":"black",
+    "navigationStyle":"default"
   },
   "tabBar": {
-    "color":"",
-    "selectedColor":"#00B26A",
+    "color":"#000000",
+    "selectedColor":"#ffffff",
+    "backgroundColor":"#00B26A",
+    "borderStyle":"white",
     "list": [{
       "iconPath":"images/icon_home.png",
       "selectedIconPath":"images/icon_home_active.png",
@@ -59,7 +63,7 @@
       "iconPath":"images/icon_home.png",
       "selectedIconPath":"images/icon_home_active.png",
       "pagePath": "pages/logs/logs",
-      "text": "日志"
+      "text": "框架"
     }, {
       "iconPath":"images/icon_home.png",
       "selectedIconPath":"images/icon_home_active.png",
@@ -76,5 +80,10 @@
       "pagePath": "pages/ui/index",
       "text": "iViewUI"
     }]
-  }
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "debug": false
 }

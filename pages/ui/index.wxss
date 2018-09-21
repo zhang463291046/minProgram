@@ -1,8 +1,8 @@
 .demo-container{
 	background: #fff;
-	height: 200px;
-	width: 200px;
+	height: 600rpx;
+	width: 400rpx;
 	position: fixed;
-	top: 0px;
-	bottom: 0px;
+	top: 0rpx;
+	bottom: 0rpx;
 }

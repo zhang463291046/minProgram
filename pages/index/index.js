@@ -12,13 +12,9 @@ Page({
     motto: '启动日志',
     logs: []
   },
-  //事件处理函数
-  bindViewTap: function() {
-    wx.navigateTo({
-      url: '../logs/logs'
-    })
-  },
-  onLoad: function () {
+  onLoad: function (options) {
+    console.log('Page onLoad', options)
+    console.log('Page onLoad', this, getCurrentPages())
     this.setData({
       logs: (wx.getStorageSync('logs') || []).map(log => {
         return util.formatTime(new Date(log))
@@ -50,6 +46,53 @@ Page({
         }
       })
     }
+  },
+  onReady: function() {
+    // Do something when page ready.
+    console.log('Page onReady')
+  },
+  onShow: function(options) {
+    // Do something when page show.
+    console.log('Page onShow',options)
+  },
+  onHide: function() {
+    // Do something when page hide.
+    console.log('Page onHide')
+  },
+  onUnload: function() {
+    // Do something when page close.
+    console.log('Page onUnload')
+  },
+  onPullDownRefresh: function() {
+    // Do something when pull down.
+    console.log('Page onPullDownRefresh')
+  },
+  onReachBottom: function() {
+    // Do something when page reach bottom.
+    console.log('Page onReachBottom')
+  },
+  onShareAppMessage: function (options) {
+    // return custom share data when user share.
+    console.log('Page onShareAppMessage',options)
+    return {
+      title: '自定义转发标题',
+      path: '/pages/ui/index',
+      imageUrl: 'https://i.loli.net/2017/08/21/599a521472424.jpg'
+    }
+  },
+  onPageScroll: function(options) {
+    // Do something when page scroll
+    console.log('Page onPageScroll',options)
+  },
+  onTabItemTap(options) {
+    console.log('Page onTabObjectTap', options)
+  },
+  //Event handler事件处理函数
+  bindViewTap: function(e) {
+    console.log(e)
+    wx.switchTab ({
+      url: '/pages/ui/index'
+    })
   },
   getUserInfo: function(e) {
     console.log(e)

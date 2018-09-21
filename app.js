@@ -1,11 +1,8 @@
 //app.js
 App({
-  globalData: {
-    userInfo: null,
-    access_token: ''
-  },
-  onLaunch: function(val) {
-    console.log('onLaunch', val)
+  // 初始化小程序
+  onLaunch: function(options) {
+    console.log('onLaunch', options)
     // 展示本地存储能力
     var logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())
@@ -15,26 +12,18 @@ App({
     wx.login({
       success: res => {
         // 发送 res.code 到后台换取 openId, sessionKey, unionId
-        console.log('res', res)
-        // wx.request({
-        //   url: 'https://api.weixin.qq.com/sns/jscode2session?appid=APPID&secret=SECRET&js_code=JSCODE&grant_type=authorization_code',
-        //   data: {
-        //     code: res.code
-        //   },
-        //   success: res2 => {
-        //     console.log('res2', res2)
-        //   }
-        // })
+        console.log('登录成功', res)
       }
     })
     // 获取用户信息
     wx.getSetting({
       success: res => {
+        console.log('授权信息', res)
         if (res.authSetting['scope.userInfo']) {
           // 已经授权，可以直接调用 getUserInfo 获取头像昵称，不会弹框
           wx.getUserInfo({
             success: res => {
-              console.log(res)
+              console.log('用户信息',res)
               // 可以将 res 发送给后台解码出 unionId
               this.globalData.userInfo = res.userInfo
 
@@ -48,7 +37,30 @@ App({
         }
       }
     })
-    // 获取用户信息
+    // 网络请求
+    this.otherFn();
+  },
+  onShow: function(options) {
+    console.log('onShow',options)
+    wx.authorize({
+      scope: "scope.userLocation"
+    });
+    wx.authorize({
+      scope: "scope.werun"
+    });
+  },
+  onHide: function() {
+    console.log('onHide')
+  },
+  onError: function(err) {
+    console.log('onError',err)
+  },
+  onPageNotFound: function(options) {
+    console.log('onPageNotFound',options)
+  },
+  //自定义方法
+  otherFn: function() {
+    console.log('otherFn','网络请求')
     var self = this;
     wx.request({
       url: 'http://120.24.55.58:8130/index.php/account/login', //仅为示例，并非真实的接口地址
@@ -65,35 +77,9 @@ App({
       }
     })
   },
-  onShow: function() {
-    console.log('onShow')
-    console.log(this)
-    wx.getSetting({
-      success: function(res) {
-        console.log(res)
-      }
-    })
-    wx.authorize({
-      scope: "scope.userInfo"
-    });
-    wx.authorize({
-      scope: "scope.userLocation"
-    });
-    wx.authorize({
-      scope: "scope.werun"
-    });
-  },
-  onHide: function() {
-    console.log('onHide')
-  },
-  onError: function() {
-    console.log('onError')
-  },
-  onPageNotFound: function() {
-    console.log('onPageNotFound')
-  },
-  otherFn: function() {
-    console.log('otherFn')
-    console.log(this)
+  //自定义对象
+  globalData: {
+    userInfo: null,
+    access_token: ''
   },
 })
