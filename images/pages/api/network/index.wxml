@@ -1,4 +1,0 @@
-<view>
-  <view>数据:{{detailValue}}</view>
-  <button size="mini" bind:tap="handleclick">点击</button>
-</view>
