@@ -2,6 +2,7 @@
   "pages":[
     "pages/index/index",
     "pages/logs/logs",
+    "pages/logs/tree-select/index",
     "pages/components/index",
     "pages/components/icon/index",
     "pages/components/text/index",

@@ -8,7 +8,13 @@
     </block>
   </view>
   <view class="usermotto">
-    <text bindtap="bindViewTap" class="user-motto">点击我切换菜单</text>
+    <text bindtap="bindViewTap" class="user-motto">切换菜单</text>
+  </view>
+  <view class="usermotto">
+    <text bindtap="bindViewTap2" class="user-motto">切换菜单并跳转子页面(第一次无法跳转子页面)</text>
+  </view>
+  <view class="usermotto">
+    <text bindtap="bindViewTap3" class="user-motto">跳转任意页面</text>
   </view>
   <view class="usermotto">
     <text class="user-motto">{{motto}}</text>

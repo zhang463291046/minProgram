@@ -1,15 +1,21 @@
-//logs.js
-const util = require('../../utils/util.js')
-
 Page({
   data: {
-    logs: []
+    
   },
   onLoad: function () {
-    this.setData({
-      logs: (wx.getStorageSync('logs') || []).map(log => {
-        return util.formatTime(new Date(log))
-      })
+    
+  },
+  bindViewTap: function(e) {
+    wx.navigateTo ({
+      url: '/pages/logs/tree-select/index'
     })
-  }
+  },
+  onClickLeft() {
+  	console.log(1)
+	  wx.showToast({ title: '点击返回', icon: 'none' });
+	},
+	onClickRight() {
+		console.log(2)
+	  wx.showToast({ title: '点击按钮', icon: 'none' });
+	}
 })

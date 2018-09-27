@@ -1,7 +1,16 @@
 <!--logs.wxml-->
-<view class="container log-list">
-  <view>数据绑定{{}}:可以进行简单的运算</view>
-  <view>列表渲染wx:for:下标默认为 index，当前项默认为 item,wx:key唯一的标识符</view>
-  <view>条件渲染wx:if,wx:else:block是一个包装元素，不会在页面中做任何渲染，只接受控制属性</view>
-  <view>模板template:模板拥有自己的作用域，只能使用 data 传入的数据以及模版定义文件中定义的模块</view>
+<view class="container">
+  <view class="log-item">数据绑定{{}}:可以进行简单的运算</view>
+  <view class="log-item">列表渲染wx:for:下标默认为 index，当前项默认为 item,wx:key唯一的标识符</view>
+  <view class="log-item">条件渲染wx:if,wx:else:block是一个包装元素，不会在页面中做任何渲染，只接受控制属性</view>
+  <view class="log-item">模板template:模板拥有自己的作用域，只能使用 data 传入的数据以及模版定义文件中定义的模块</view>
+  <view class="log-item">自定义组件:tree-select</view>
+  <tree-select 
+  	title="标题"
+	  left-text="返回"
+	  right-text="按钮"
+	  left-arrow
+	  bind:click-left="onClickLeft"
+	  bind:click-right="onClickRight">
+  </tree-select>
 </view>

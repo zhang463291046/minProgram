@@ -94,6 +94,23 @@ Page({
       url: '/pages/ui/index'
     })
   },
+  bindViewTap2: function(e) {
+    console.log(e)
+    wx.switchTab ({
+      url: '/pages/components/index',
+      success: function(){
+        wx.navigateTo ({
+          url: '/pages/components/icon/index'
+        })
+      }
+    })
+  },
+  bindViewTap3: function(e) {
+    console.log(e)
+    wx.reLaunch ({
+      url: '/pages/components/icon/index'
+    })
+  },
   getUserInfo: function(e) {
     console.log(e)
     app.globalData.userInfo = e.detail.userInfo
