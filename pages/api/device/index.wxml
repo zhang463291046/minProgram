@@ -1,6 +1,6 @@
 <view>
 	<view>
-    <view>系统信息</view>
+    <view>1.系统信息</view>
     <view>
     	<button size="mini" bind:tap="handleclick1">异步获取系统信息</button>
 		  <button size="mini" bind:tap="handleclick2">同步获取系统信息</button>
@@ -8,31 +8,31 @@
     </view>
   </view>
   <view>
-    <view>网络状态</view>
+    <view>2.网络状态</view>
     <view>
     	<button size="mini" bind:tap="handleclick4">网络状态</button>
     </view>
   </view>
   <view>
-    <view>拨打电话</view>
+    <view>3.拨打电话</view>
     <view>
     	<button size="mini" bind:tap="handleclick5">拨打电话</button>
     </view>
   </view>
   <view>
-    <view>扫码</view>
+    <view>4.扫码</view>
     <view>
     	<button size="mini" bind:tap="handleclick6">扫码</button>
     </view>
   </view>
   <view>
-    <view>震动</view>
+    <view>5.震动</view>
     <view>
     	<button size="mini" bind:tap="handleclick7">长震动</button>
     </view>
   </view>
   <view>
-    <view>WIFI</view>
+    <view>6.WIFI</view>
     <view>
       <button size="mini" bind:tap="handleclick9">初始化</button>
       <button size="mini" bind:tap="handleclick10">搜索</button>

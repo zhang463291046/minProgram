@@ -13,4 +13,5 @@
 	  bind:click-left="onClickLeft"
 	  bind:click-right="onClickRight">
   </tree-select>
+  <view class="log-item">插件</view>
 </view>

@@ -6,10 +6,8 @@ Page({
   	detailValue: []
   },
   onReady: function() {
-  	console.log('onReady')
   },
   onShow: function(){
-    console.log('onShow')
   },
   handleclick1: function(e) {
   	var self = this;

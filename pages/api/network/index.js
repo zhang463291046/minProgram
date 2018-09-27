@@ -6,13 +6,14 @@ Page({
   	url: '',
   },
   onReady: function() {
-  	console.log('onReady')
+  	
   },
   onShow: function(){
-    console.log('onShow')
+    
   },
   handleclick1: function(e) {
   	util.post('menu/get_list',{}).then(res =>{
+      console.log(res)
   		this.setData({
 	    	detailValue: res
 	    })
@@ -23,9 +24,10 @@ Page({
     wx.chooseImage({
       success: function(res) {
         var tempFilePaths = res.tempFilePaths;
-        util.upload('Uploadify/upload_image',tempFilePaths[0]).then(res =>{
+        util.upload('Uploadify/upload_image',tempFilePaths[0]).then(res2 =>{
+          console.log(res2)
           self.setData({
-            url: res
+            url: res2
           })
         })
       }

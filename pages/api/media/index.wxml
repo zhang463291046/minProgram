@@ -1,9 +1,9 @@
 <view>
   <button size="mini" bind:tap="handleclick1">选择图片</button>
-  <button size="mini" bind:tap="handleclick2">预览图片</button>
-  <button size="mini" bind:tap="handleclick3">保存当前图片</button>
   <view>
   	<view>数据区域</view>
     <image wx:for="{{detailValue}}" wx:for-item="item" src="{{item}}"></image>
   </view>
+  <button size="mini" bind:tap="handleclick2">预览图片</button>
+  <button size="mini" bind:tap="handleclick3">保存当前图片</button>
 </view>
