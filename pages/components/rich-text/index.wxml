@@ -1,1 +1,2 @@
 <rich-text nodes="{{nodes}}" bindtap="tap"></rich-text>
+<rich-text nodes="<h1><a href='www.baidu.com'>www.baidu.com</a></h1>" bindtap="tap"></rich-text>

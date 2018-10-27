@@ -1,3 +1,5 @@
+const { $Toast } = require('../../iview/dist/base/index');
+const { $Message } = require('../../iview/dist/base/index');
 Page({
   data: {
     current: 'homepage',
@@ -19,6 +21,7 @@ Page({
       }
     ],
     visible2: false,
+    name: 'name1',
     targetTime: new Date().getTime() + 6430000,
     clearTimer: false,
     value2: '',
@@ -106,7 +109,10 @@ Page({
     console.log(index)
   },
   handleText () {
-    
+    $Toast({
+      content: '这是文本提示',
+      type: 'success'
+    });
   },
   handleOpen2 () {
     this.setData({
@@ -116,6 +122,12 @@ Page({
   handleCancel2 () {
     this.setData({
         visible2: false
+    });
+  },
+  handleDelete () {
+    $Message({
+      content: '删除成功',
+      type: 'success'
     });
   },
   handleFruitChange({ detail = {} }) {

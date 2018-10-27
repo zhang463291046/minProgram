@@ -1,8 +1,64 @@
+/*加载中*/
+.container{
+    display: block;
+    width: 200px;
+    height: 100px;
+    margin: 0 auto;
+    position: relative;
+    border: 1px solid #eee;
+}
+@keyframes ani-demo-spin {
+    from { transform: rotate(0deg);}
+    50%  { transform: rotate(180deg);}
+    to   { transform: rotate(360deg);}
+}
+.icon-load{
+    animation: ani-demo-spin 1s linear infinite;
+}
+/*抽屉*/
 .demo-container{
-	background: #fff;
-	height: 600rpx;
-	width: 400rpx;
-	position: fixed;
-	top: 0rpx;
-	bottom: 0rpx;
+  background: #fff;
+  width: 60vw;
+  height: 100vh;
+}
+/*侧边滑动*/
+.i-swipeout-demo-item{
+    border-bottom:#333 solid 1px;
+}
+.i-cell-padding{
+    padding:5px 0px!important;
+    font-size:14px;
+}
+/*左中右结构*/
+.i-swipeout-image{
+    float:left;
+    width:40px;
+    height:40px;
+    line-height:40px;
+    text-align:center;
+    border-radius:40px;
+    background: #2d8cf0;
+}
+.i-swipeout-des{
+    margin-left:50px;
+}
+.i-swipeout-des-detail{
+    font-size:12px;
+    word-break:break-all;
+    color:#80848f;
+}
+/*自定义按钮*/
+.i-swipeout-demo-button-group{
+    height:100%;
+    width:100%;
+}
+.i-swipeout-demo-button{
+    width:70px;
+    float:left;
+    display: flex;
+    height:100%;
+    justify-content: center;
+    background:#2d8cf0;
+    color:#fff;
+    align-items:center;
 }
